@@ -1,3 +1,8 @@
+.btn-color {
+  display: block;
+  margin: 0 auto;
+}
+
 .traffic-light {
   margin: 100px auto 0;
   height: 200px;
@@ -42,6 +47,59 @@
   right: 20px;
   border-bottom: 16px solid rgba(0, 0, 0, 0.5);
   border-right: 16px outset transparent;
+  width: 0;
+  height: 0;
+}
+
+.tooltip-bottom {
+  position: absolute;
+  bottom: -75px;
+  width: 90%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s all;
+}
+
+.tooltip-bottom:before {
+  content: '';
+  position: absolute;
+  transform: rotate(-45deg);
+  top: -8px;
+  left: 20px;
+  border-right: 16px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 16px outset transparent;
+  width: 0;
+  height: 0;
+}
+
+.tooltip-center {
+  position: absolute;
+  top: 15%;
+  left: -100%;
+  width: 90%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s all;
+}
+
+.tooltip-center:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%) rotate(45deg);
+  border-right: 16px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 16px outset transparent;
   width: 0;
   height: 0;
 }

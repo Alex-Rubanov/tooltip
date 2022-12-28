@@ -33,6 +33,13 @@ function showTooltip() {
     let color = trafficLight.dataset.color;
 
     tooltip.textContent = TOOLTIP_MESSAGE[color];
+    if (trafficLight.dataset.color === 'green') {
+        return tooltip.classList.add('tooltip-bottom');
+    }
+    if (trafficLight.dataset.color === 'yellow') {
+        return tooltip.classList.add('tooltip-center');
+    }
+
     tooltip.classList.add('tooltip-top'); 
 }
 
@@ -40,5 +47,5 @@ trafficLight.addEventListener('mouseleave', hideTooltip);
 
 function hideTooltip() {
     tooltip.textContent = '';
-    tooltip.classList.remove('tooltip-top');
+    tooltip.classList.remove('tooltip-top', 'tooltip-bottom', 'tooltip-center');
 }
