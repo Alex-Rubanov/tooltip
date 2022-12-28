@@ -1,0 +1,47 @@
+.traffic-light {
+  margin: 100px auto 0;
+  height: 200px;
+  width: 200px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  position: relative;
+  cursor: pointer;
+}
+
+.traffic-light[data-color="red"] {
+  background-color: red;
+}
+
+.traffic-light[data-color="green"] {
+  background-color: green;
+}
+
+.traffic-light[data-color="yellow"] {
+  background-color: yellow;
+}
+
+.tooltip-top {
+  position: absolute;
+  top: -75px;
+  width: 90%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s all;
+}
+
+.tooltip-top:before {
+  content: '';
+  position: absolute;
+  transform: rotate(-45deg);
+  bottom: -8px;
+  right: 20px;
+  border-bottom: 16px solid rgba(0, 0, 0, 0.5);
+  border-right: 16px outset transparent;
+  width: 0;
+  height: 0;
+}
